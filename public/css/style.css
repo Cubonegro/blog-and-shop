@@ -1,0 +1,217 @@
+:root{
+    --ColorMenu:#00a4db;
+    --ColorFondo:#f0f3f5;
+    --Blanco: #fff;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: var(--ColorFondo);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+/*----------------------------------------------------------Titulo------------------------------------*/
+.Contenedor{
+    width: 100%;
+    max-width: 1150px;
+    margin: auto;
+    margin-top: 2.2rem;
+}
+.Title{
+    font-family: 'Paprika', cursive;
+}
+.Title_h1{
+    font-size: 1.8rem;
+}
+.Title_p{
+    font-size: 1rem;
+}
+/*-------------------------------------------Elavoracion Del Menu--------------------------------------*/
+.menu{
+    width:100%;
+    height: 3.12em;
+    background: var(--ColorMenu);
+    margin-top:1em ;
+
+}
+.menu ul{
+    list-style: none;
+}
+.menu li{
+    margin: .9em 1.8em .9em .68em;
+    float: left;
+}
+
+.menu a{
+    font-size: 1.05em;
+    text-decoration: none;
+    color: var(--ColorFondo);
+}
+.menu_li_Active a{
+    font-size: 1.11em;
+    color:  var(--Blanco);
+}
+/* Hice esto sin ninguna razon pero si quiere lo puede usar, (Es una Transicion al menu :v)
+.menu li :hover{
+    color: #fff;
+    transition: all 1s;
+}
+*/
+.Img_Header img{
+    width: 100%;
+    height: 26em;
+    margin: .9em 0 0;
+}
+/* ----------------------------------------Los Diseños del Section---------------------------------*/
+.Section{
+    width: 100%;
+    background: var(--Blanco);
+    margin-bottom: 3px;
+}
+.Subtitulo h2{
+    font-size: 1.7em;
+    font-weight: 10;
+    padding: .69rem 1.29rem;
+    margin-top: .68rem;
+}
+.Section_Img img{
+    display: block;
+    width: 60%;
+    height: 30em;
+    margin: auto;
+}
+.Section_p p{
+    padding: 1.29rem 3.09em 1.8rem;
+    text-align: justify;
+}
+/*-----------------------------------Imagenes de Las Redes Sociales-----------------------------*/
+.Section_Redes{
+  text-align: center;
+}
+.Section_Redes img{
+    width: 7em;
+    height: 7em;
+    margin: 1em 1em 2em;
+}
+/*-------------------------------------Estructuracion De la Pagina------------------------------*/
+.Justify_Section{
+    display:grid; 
+    grid-template-columns: 70% 29%;
+}
+.Section_Shot_Justify{
+    margin: 0 0 8px 0;
+}
+.Section_Shot{
+    background: var(--Blanco);
+    margin-bottom:.25em;
+  
+}
+/*-------------------------La organizacion de los productos con el grid---------------------------*/
+.Section_Shot_Contenedor{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+ /*-----------------------------Estos son Los Productos de la Shot----------------------------*/
+.Products{
+    text-align: center;
+    width: 90%;
+    height: 17rem;
+    font-size: .9em;
+    margin: 1.9em;
+    font-weight: bold;
+} 
+.Products img{
+    width: 85%;
+    height: 12em;
+}
+.Products h3{
+    color: rgb(9, 255, 0);
+    padding: 3px 0 ;
+}
+.Products button, .Section_Publications_Button Button {
+    width: 6rem;
+    height: 1.7rem;
+    border-radius: .38rem;
+    background: var(--ColorMenu);
+    color: Var(--Blanco);
+    border: solid var(--ColorMenu);
+}
+
+/*-----------------------Section De Las Publicaciones------------------------*/
+.Section_Publications{
+    text-align: justify;
+    width: 95%;
+    display: block;
+    margin: auto;
+}
+.Section_Publications img{
+    padding: 1em 0;
+    width: 100%;
+    height: 20em;
+}
+.Section_Publications_Button button{
+    margin: 1rem 0;
+}
+/*---------------------------------Este es el Aside------------------------------------------*/
+.Section_Aside{
+    margin: .69rem 0 .69rem .69rem ;
+    width:100%;
+    background: var(--Blanco);
+    padding: 1rem;
+}
+.Section_Aside p{
+    padding: 0 0 .69rem;
+}
+.Section_Aside_ul{
+    padding: .8rem 0 0;
+}
+.Section_Aside_ul li{
+    list-style: none;
+    display: block;
+}
+.Section_Aside_ul a{
+    text-decoration: none; 
+    color: var(--ColorMenu);  
+}
+.Section_Aside_Form{
+    display: block;
+}
+.Section_Aside_Form input{
+ margin-right: .38rem;
+}
+/*-------------------------------------------Diseño del Footer-----------------------------------------*/
+.Footer{
+    width: 100%;
+    height: 2.9rem;
+    text-align: center;
+    background: var(--ColorMenu);
+    color: var(--Blanco);
+    font-size: 1.1rem;
+    padding-top: .75rem;
+}
+/*-----------------------------------------Responsive------------------------------------------*/
+@media  (max-width:720px) {
+    .Section_Shot_Contenedor{
+        grid-template-columns: 50% 50%;
+    }
+    .Products{
+        margin: 1.2em;
+    }
+    .Section_Img img{
+        height: 19em;
+    }
+} 
+@media (max-width:515px){
+    body{
+        font-size:12.5px;
+    }
+    .Section_Shot_Contenedor{
+        grid-template-columns: 100%;
+    }
+    .Justify_Section{
+        grid-template-columns: 69% 28%;
+    }   
+}
